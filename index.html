@@ -6,35 +6,41 @@
   <style>
     body {
       font-family: sans-serif;
+      background: #fdf6f6;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background: #f9f9f9;
+      text-align: center;
     }
+
     h1 {
-      font-size: 2.5em;
+      font-size: 2.2em;
+      margin-bottom: 0.2em;
     }
+
     .counter {
       font-size: 6em;
-      color: darkred;
-      margin-top: 0.3em;
+      color: #e63946;
+    }
+
+    .label {
+      font-size: 1.1em;
+      margin-top: 0.5em;
     }
   </style>
 </head>
 <body>
-  <h1>Dias desde que [o VAR não interferiu]</h1>
+  <h1>Dias desde que a Bruna e o Damo acabaram</h1>
   <div class="counter" id="daysCount"></div>
+  <div class="label">(esperamos que estejam bem, mas ainda assim...)</div>
 
   <script>
-    const lastEventDate = new Date("2024-07-01"); // alterar aqui
+    const lastEventDate = new Date("2024-06-25"); // atualiza se precisares
     const today = new Date();
-    
-    // calcular diferença em dias
     const diffTime = today - lastEventDate;
     const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
     document.getElementById("daysCount").textContent = diffDays;
   </script>
 </body>
